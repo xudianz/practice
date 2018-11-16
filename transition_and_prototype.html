@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .tab {
+    width: 500px;
+    height: 44px;
+    background: #f1f1f1;
+    margin: 100px auto;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .tab .tab-item {
+    flex: 1;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .tab .line {
+    background:#FF9900;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    right: 66.66666%;
+    transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+  }
+  </style>
+</head>
+<body>
+  <div class="tab" id="tab">
+    <div class="tab-item" data-index="0">tab1</div>
+    <div class="tab-item" data-index="1">tab2</div>
+    <div class="tab-item" data-index="2">tab3</div>
+    <div class="line"></div>
+  </div>
+  <script>
+    var tab = document.getElementById('tab');
+    var line = tab.getElementsByClassName('line')[0]
+    var items = tab.getElementsByClassName('tab-item')
+    var tabLength = tab.clientWidth
+    tab.onclick = function (e) {
+      var index = e.target.getAttribute('data-index')
+      line.style.left = index * 0.3333333 * tabLength + 'px' // 0 33 66
+      if (index === "0") {
+        line.style.right = 0.6666666 * tabLength + 'px'
+      } else if (index === "1") {
+        line.style.right = 0.3333333 * tabLength + 'px'
+      } else {
+        line.style.right = 0 + 'px'
+      }
+    }
+  </script>
+  <script>
+    // https://www.cnblogs.com/xiaohuochai/p/5721552.html
+    function Create (name) {
+      this.name = name
+    }
+    Create.prototype.play = function () {
+        console.log('I can play')
+      }
+    var example = new Create('Linas')
+    // 1.构造函数有一个prototype属性，指向实例对象的原型,通过同一个构造函数实例化的// 多个对象具有相同的原型对象。经常使用原型对象来实现继承
+    // ====> console.log(Create.prototype === example.__proto__)
+    // ====> console.log(Create.__proto__ === Function.prototype) 
+    
+    // 2.原型对象拥有constructor属性，指向该原型对象对应的构造函数
+    // ====> console.log(Create.prototype.constructor === Create)   
+
+    // 3.由于实例对象可以继承原型对象的属性， 所以实例对象也有constructor属性，同样// 指向原型对象对应的构造函数
+    // =====> console.log(example.constructor === Create)
+  </script>
+</body>
+</html>
