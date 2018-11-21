@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .rating{
+    width: 80px;
+    height: 16px;
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid black;
+  }
+  .rating-item{
+    display:block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+  }
+  .rating-item-1{
+    left: 0
+  }
+  .rating-item-2{
+    left: 16px;
+  }
+  .rating-item-3{
+    left: 32px;
+  }
+  .rating-item-4{
+    left: 48px;
+  }
+  .rating-item-5{
+    left: 64px;
+  }
+  #rating-1:target{
+    background: red;
+  }
+  #rating-2:target{
+    background: yellow;
+  }
+  .rating-item-3:target{
+    background: blue;
+  }
+  #rating-4:target{
+    background: black;
+  }
+  #rating-5:target{
+    background: orange;
+  }
+  </style>
+  <style>
+  .mousemove{
+    width: 80%;
+    height: 60px;
+    background: #333;
+    margin: 10px auto;
+    color: #ffffff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+  }
+  </style>
+</head>
+<body>
+  <div class="rating">
+    <a href="#rating-1" id="rating-1" class="rating-item rating-item-1"></a>
+    <a href="#rating-2" id="rating-2" class="rating-item rating-item-2"></a>
+    <a href="#rating-3" id="rating-3" class="rating-item rating-item-3"></a>
+    <a href="#rating-4" id="rating-4" class="rating-item rating-item-4"></a>
+    <a href="#rating-5" id="rating-5" class="rating-item rating-item-5"></a>        
+  </div>
+  <div id="container" class="mousemove"></div>
+</body>
+<script>
+  var count = 0
+  var container = document.getElementById('container')
+  function getUserAction (e) {
+    container.innerHTML = count++ 
+    console.log(e)
+  }
+  function debounce (func, delay, immediate) { // immediate 立即执行
+    var timeout
+    return function (...args) {
+      var _this = this
+      if (timeout) clearTimeout(timeout)
+      if (immediate) {
+        var callNow = !timeout
+        timeout = setTimeout(function () {
+          timeout = null
+        }, delay)
+        console.log(callNow)
+        if (callNow) func.apply(_this, args)
+      } else {
+        timeout = setTimeout(function () {
+          func.apply(_this, args)
+        }, delay)
+      }
+    }
+  }
+
+  function throttle (func, wait) {
+    var context, args
+    var previous = 0
+
+    return function () {
+      var now = +new Date()
+      context = this
+      args = arguments
+      if (now - previous > wait) {
+        func.apply(context, args)
+        previous = now
+      }
+    }
+  }
+
+  // container.onmousemove = debounce(getUserAction, 1000, true)
+  // container.onmousemove = throttle(getUserAction, 1000)  
+
+  var array = [1, 1, '1', 4, 2, 9]
+
+  function unique (array) {
+    var ret = []
+    for (var i = 0; i < array.length; i++) {
+      for (var j = 0; j < ret.length; j++) {
+        if (array[i] === ret[j]) {
+           break
+        }
+      }
+      if (j == ret.length) {
+        ret.push(array[i])
+      }
+    }
+    return ret
+  }
+
+  function unique2 (arr) {
+    var ret = []
+    for (var i = 0; i < arr.length; i++) {
+      var item = arr[i]
+      if (ret.indexOf(item) === -1) {
+        ret.push(item)
+      }
+    }
+    return ret
+  }
+
+  function unique3 (arr) {
+    var res = []
+    var sort = arr.concat().sort()
+    var seen
+    for (var i = 0; i < sort.length; i++) {
+      // 第一个或相邻元素不相同
+      if (!i || seen !== sort[i]) {
+        res.push(sort[i])
+      }
+      seen = sort[i]
+    }
+    return res
+  }
+
+function unique4 (arr) {
+  var result = arr.filter((item, index, array) => {
+    return array.indexOf(item) === index
+  })
+  return result
+}
+
+function unique5 (arr) {
+  var result = arr.concat().sort().filter((item, index, array) => {
+    return !index || item !== array[index -1]
+  })
+  return result
+}
+// console.log(unique5(array))
+var ori_arr = ['old', 1, true, ['old1', 'old2'], {old: 1}]
+var new_arr = JSON.parse(JSON.stringify(ori_arr))
+new_arr[3][0] = 'new1'
+console.log(ori_arr, new_arr)
+
+
+// var url = document.location.href
+//     var jointStr
+//     if (url.indexOf('?') > 0) {
+//       jointStr = url.split('?')[1]
+//       location.href = '/if.html?' + jointStr
+//     } else {
+//       location.href = '/if.html'
+//     }
+/////////////////////////////////////////////////////////////
+// $.ajax({
+//    url: 'cardNo.html',
+//    success: function (msg) {
+//      var Oristr = msg.replace(/\n/g, ',');
+//      var str = Oristr.replace(/\r/g, '')
+//      var myArr = str.split(",")
+//      var len = myArr.length
+//      var end = []
+//      $.each(myArr, function (i,v){
+//       if (!isCardID(v)){
+//         end.push(v)
+//         console.log(v, i + 1)
+//       }
+//      })
+//       console.log(end)
+//     }
+//  })
+
+</script>
+</html>
