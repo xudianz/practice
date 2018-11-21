@@ -74,6 +74,16 @@
 
     // 3.由于实例对象可以继承原型对象的属性， 所以实例对象也有constructor属性，同样// 指向原型对象对应的构造函数
     // =====> console.log(example.constructor === Create)
+
+    function Cat (name) {
+      this.name = name
+    }
+    Cat.sex = '女'
+    Cat.prototype.age = 10
+    var cat = new Cat('xiaogou')
+    console.log(cat.name, cat.sex, cat.age, cat.hasOwnProperty('age'), cat.constructor)
+    //输出: xiaogou undefined 10 false ƒ Cat (name) {this.name = name}
+    // 使用原型对象prototype来实现继承
   </script>
 </body>
 </html>
