@@ -1,0 +1,147 @@
+.container {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  background: rgba(0, 0, 0, 1);
+  left: 100px;
+  top: 50px;
+}
+.component {
+  position: absolute;
+  left: 10px;
+  top: 65px;
+}
+.component .star {
+  position: absolute;
+}
+.component .star::after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 7.5px;
+  height: 2px;
+  top: 2.75px;
+  background: #fff;
+}
+.component .star::before{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 2px;
+  height: 7.5px;
+  left: 2.75px;
+  background: #fff;
+}
+.component .star:nth-child(1) {
+  top: -10px;
+  left: 30px;
+}
+.component .star:nth-child(2) {
+  top: -25px;
+  left: 30px;
+}
+.component .star:nth-child(3) {
+  top: -40px;
+  left: 30px;
+}
+.component .star:nth-child(4) {
+  top: -25px;
+  left: 0;
+}
+.component .star:nth-child(5) {
+  top: -40px;
+  left: 0px;
+}
+.component .star:nth-child(6) {
+  top: -55px;
+  left: 0;
+}
+.component .star.float-down {
+  animation: floatDown 5s ease-in-out 0s forwards infinite;
+}
+.component .star.float-up {
+  animation: floatUp 5s ease-in-out 0s forwards infinite;
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: none;
+    opacity: 1;
+  }
+  50%{
+    transform: translate3d(0, -20px, 0);
+    opacity: 0.7;
+  }
+}
+@keyframes floatUp {
+  0%, 100% {
+    transform: none;
+    opacity: 1;
+  }
+  50%{
+    transform: translate3d(0, 20px, 0);
+    opacity: 0.7;
+  }
+}
+
+
+.computer {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+.computer img {
+  width: 246px;
+  height: 232px;
+}
+.content-wrapper {
+  position: absolute;
+  left: 23px;
+  top: 47px;
+  width: 140px;
+  height: 90px;
+  background: linear-gradient(90deg,#fff,rgba(255,255,255,.73));
+  transform: skewY(-27deg);
+}
+.user-box {
+  position: absolute;
+  top: 10px;  
+  right: 9px;
+  width: 37px;
+  height: 74px;
+  background: linear-gradient(to bottom,#01f77a,rgba(1,247,122,0));
+  opacity: 0.3;
+}
+.user-box .box {
+  position: absolute;
+  width: 37px;
+  height: 74px;
+}
+.user-box .box:nth-child(1) {
+  background-image: linear-gradient(to bottom,#01f77a,rgba(1,247,122,0.75));
+  animation: floatUser1 10s 5s infinite ease-in-out;
+}
+.user-box .box:nth-child(2) {
+  background-image:linear-gradient(to bottom,#01f77a,rgba(1,247,122,1));
+  animation: floatUser2 10s 5s infinite ease-in-out;  
+}
+@keyframes floatUser1 {
+  0%, 100% {
+    transform: none;
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate3d(10px,10px,0);
+    opacity: 0.5;
+  }
+}
+@keyframes floatUser2 {
+  0%, 100% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: translate3d(20px,20px,0);
+    opacity: 1;
+  }
+}
