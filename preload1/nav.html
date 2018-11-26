@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wrap {
+      position: relative;
+      width: 200px;
+      left: 50px;
+      top: 50px;
+    }
+    ul {
+      padding: 15px 0;
+      margin: 0;
+      list-style: none;
+      background: #6c6669;
+      color: #fff;
+      border-right-width: 0;
+    }
+    li {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 12px;
+      cursor: pointer;
+      font-size: 14px;
+      position: relative; 
+    }
+    li.active {
+      background: #999395;
+    }
+    li span:hover {
+      color: #c81623;
+    }
+
+    .none {
+      display: none;
+    }
+    #sub {
+      width: 600px;
+      position: absolute;
+      border: 1px solid #f7f7f7;
+      background: #f7f7f7;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+      left: 200px;
+      top: 0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 10px;
+    }
+    .sub_content a{
+      font-size: 12px;
+      color: #666;
+      text-decoration: none;
+    }
+    .sub_content dd a {
+      border-left: 1px solid #e0e0e0;
+      padding: 0 10px;
+      margin: 4px 0;
+    }
+    .sub_content dl {
+      overflow: hidden;
+    }
+    .sub_content dt {
+      float: left;
+      width: 70px;
+      font-weight: bold;
+      clear: left;
+      position: relative;
+    }
+    .sub_content dd {
+      float: left;
+      margin-left: 5px;
+      border-top: 1px solid #eeeeee;
+      margin-bottom: 5px;
+    }
+    .sub_content dt i {
+      width: 4px;
+      height: 4px;
+      font: 400 9px/14px consolas;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="test">
+    <ul>
+      <li data-id="a">
+        <span>家用电器</span>
+      </li>
+      <li data-id="b">
+        <span>手机 / 运营商 / 书码</span>
+      </li>
+      <li data-id="c">
+          <span>电脑办公</span>
+      </li>
+      <li data-id="d">
+        <span>家居 / 家具 / 家装 / 厨具</span>
+      </li>
+      <li data-id="e">
+        <span>男装 / 女装 / 童装 / 内衣</span>
+      </li>
+      <li data-id="f">
+        <span>个护化妆 / 清洁用品 / 宠物</span>
+      </li>
+      <li data-id="g">
+        <span>鞋靴 / 箱包 / 珠宝 / 奢侈品</span>
+      </li>
+      <li data-id="h">
+        <span>运动 / 户外 / 钟表</span>
+      </li>
+      <li data-id="i">
+        <span>食品 / 女婴用品</span>
+      </li>
+      <li data-id="j">
+        <span>女婴 / 玩具乐器</span>
+      </li>
+      <li data-id="k">
+        <span>食品 / 酒类 / 生鲜 / 特产</span>
+      </li>
+      <li data-id="l">
+        <span>医药保健</span>
+      </li>
+    </ul>
+    <div id="sub" class="none">
+      <div id="a" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">电视<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">合资品牌</a>
+            <a href="#">国产品牌</a>
+            <a href="#">互联网品牌</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">空调<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">壁挂式空调</a>
+            <a href="#">柜式空调</a>
+            <a href="#">中央空调</a>
+            <a href="#">空调配件</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">洗衣机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">洗衣机1</a>
+            <a href="#">洗衣机2</a>
+            <a href="#">洗衣机3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">冰箱<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">冰箱1</a>
+            <a href="#">冰箱2</a>
+            <a href="#">冰箱3</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="b" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机1</a>
+            <a href="#">手机2</a>
+            <a href="#">手机3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机1</a>
+            <a href="#">手机2</a>
+            <a href="#">手机3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机1</a>
+            <a href="#">手机2</a>
+            <a href="#">手机3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机1</a>
+            <a href="#">手机2</a>
+            <a href="#">手机3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">手机<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">手机1</a>
+            <a href="#">手机2</a>
+            <a href="#">手机3</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="c" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">电脑办公<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+            <a href="#">电脑办公</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="d" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">家居<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+            <a href="#">家居</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="e" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">男装<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+            <a href="#">男装</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="f" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">个护化妆<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+            <a href="#">个护化妆</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="g" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">鞋靴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+            <a href="#">鞋靴</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="h" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">运动<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+            <a href="#">运动</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="i" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车</a>
+            <a href="#">汽车</a>
+            <a href="#">汽车</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车</a>
+            <a href="#">汽车</a>
+            <a href="#">汽车</a>
+            <a href="#">汽车</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">汽车<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">汽车1</a>
+            <a href="#">汽车2</a>
+            <a href="#">汽车3</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="j" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴</a>
+            <a href="#">女婴</a>
+            <a href="#">女婴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴</a>
+            <a href="#">女婴</a>
+            <a href="#">女婴</a>
+            <a href="#">女婴</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">女婴<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">女婴1</a>
+            <a href="#">女婴2</a>
+            <a href="#">女婴3</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="k" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+            <a href="#">食品</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">食品<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">食品1</a>
+            <a href="#">食品2</a>
+            <a href="#">食品3</a>
+          </dd>
+        </dl>
+      </div>
+      <div id="l" class="sub_content none">
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+            <a href="#">医药保健</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="#">医药保健<i>&gt;</i></a>
+          </dt>
+          <dd>
+            <a href="#">医药保健1</a>
+            <a href="#">医药保健2</a>
+            <a href="#">医药保健3</a>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/nav/functions.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>
