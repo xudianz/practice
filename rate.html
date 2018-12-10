@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      list-style-type: none;
+    }
+    /*CSS File of NineGrid*/
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* 1个大盒子 */
+    div.grid_wrapper{
+      width: 260px;/*..80*3+5*4..*/
+      height: 260px;
+      padding: 0;
+      margin:0 auto;/*水平局中*/
+    
+      /*border: green 1px solid;*/
+    }
+    
+    /*-----小格子-----*/
+    /*未访问和已访问过*/
+    .grid a:link, .grid a:visited{
+      width: 80px;
+      height: 80px;
+      border: #999 2px solid;
+      float: left;
+      text-decoration: none;
+      text-align: center;
+      line-height: 80px;
+      font-size: 30px;
+      font-family: Arial,Verdana,Sans-serif;
+    
+      margin-left: -2px;
+      margin-top: -2px;
+      position: relative;
+      z-index: 1;/*堆叠顺序*/
+    }
+    /*鼠标悬停*/
+    .grid a:hover{	
+      border-color: #222;
+      z-index: 2;
+    }
+    /*鼠标按下*/  
+    .grid a:active{
+      border-color: #f00;
+    }
+
+  </style>
+</head>
+<body>
+  <ul id="rating" class="rating">
+    <li class="rating-item" title="很不好"></li>
+    <li class="rating-item" title="不好"></li>
+    <li class="rating-item" title="一般"></li>
+    <li class="rating-item" title="好"></li>
+    <li class="rating-item" title="很好"></li>
+  </ul>
+  <div class="grid_wrapper">
+    <div class="grid"><a href="#" title="">1</a></div>
+    <div class="grid"><a href="#" title="">2</a></div>
+    <div class="grid"><a href="#" title="">3</a></div>
+    <div class="grid"><a href="#" title="">4</a></div>
+    <div class="grid"><a href="#" title="">5</a></div>
+    <div class="grid"><a href="#" title="">6</a></div>
+    <div class="grid"><a href="#" title="">7</a></div>
+    <div class="grid"><a href="#" title="">8</a></div>
+    <div class="grid"><a href="#" title="">9</a></div>
+  </div>
+  <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    var a = '78'
+    var b = '12345678'
+    function isContain (a, b) {
+      var index = -1;
+      var aL = a.length;
+      var bL = b.length;
+      for (var i = 0; i <= bL - aL; i++) {
+        if (b.slice(i, i + aL) === a) {
+          index = i
+        }
+      } 
+      console.log(index)
+    }
+    isContain(a, b)
+  </script>
+</body>
+</html>
